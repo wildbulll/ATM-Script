@@ -23,33 +23,35 @@ account_balance = float(500.25)
 
 
 # <--------functions go here-------------------->
-# print balance function
+# Rubric inject: print balance function
 def balance():
-  print("Your current balance:\n" + str(account_balance))
+  print("Your current balance:\n" + str(account_balance)) # Rubric inject: example of functions that return the correct output
 
 
-# deposit function
+# Rubric inject: deposit function
 def deposit():
     global account_balance
-    depositAmount = raw_input("How much would you like to deposit today?\n")
+    depositAmount = raw_input("How much would you like to deposit today?\n") # Rubric inject: input (parameters) that are utilized within the function(s)
     account_balance += float(depositAmount)
-    print("Deposit was $" + str('%.2f' % float(depositAmount)) + ", current balance is $" + str(account_balance))
+    print("Deposit was $" + str('%.2f' % float(depositAmount)) + ", current balance is $" + str(account_balance)) # Rubric inject: example of functions that return the correct output
 
 
-# withdraw function
+# Rubric inject: withdraw function
 def withdraw():
     global account_balance
-    withdrawAmount = raw_input("How much would you like to withdraw today?\n")
+    withdrawAmount = raw_input("How much would you like to withdraw today?\n") # Rubric inject: input (parameters) that are utilized within the function(s)
     if float(withdrawAmount) > account_balance:
+        # Rubric inject: example of functions that return the correct output
         print("$" + str('%.2f' % float(withdrawAmount)) + " is greater that your account balance of $" + str('%.2f' % float(account_balance)))
     else:
         account_balance -= float(withdrawAmount)
+        # Rubric inject: example of functions that return the correct output
         print("Withdrawal amount was $" + str('%.2f' % float(withdrawAmount)) + ", current balance is $" + str('%.2f' % float(account_balance)))
 
 
-# quit function
+# Rubric inject: quit function
 def quit():
-    print("Thank you for banking with us.")
+    print("Thank you for banking with us.") # Rubric inject: example of functions that return the correct output
 
 
 # User Input goes here, use if/else conditional statement to call function based on user input
@@ -63,3 +65,4 @@ options = {'B': balance,
 }
 
 options[userchoice]()
+# Used to determine which function to run instead of using several if statements
