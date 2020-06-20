@@ -1,0 +1,47 @@
+import sys
+
+account_balance = float(500.25)
+
+# CUSTOM FUNCTION
+# def balance() function only runs when it's called, and can pass data into it.
+def balance():
+    # FUNCTION THAT RETURNS THE CORRECT OUTPUT
+    print("Your current balance : $%.2f" % account_balance)
+    
+# CUSTOM FUNCTION
+# def deposit()
+def deposit():
+    # INPUT(PARAMETER)
+    deposit_amount = float(input("How much would you like to deposit today?\n")) 
+    balance = account_balance + deposit_amount
+    # FUNCTION THAT RETURNS THE CORRECT OUTPUT
+    print("Deposit was $%.2f, current balance is $%.2f" % (deposit_amount,balance))
+  
+# CUSTOM FUNCTION
+# def withdrawal()
+def withdrawal():
+    # INPUT(PARAMETER)
+    withdrawal_amount = float(input("How much would you like to withdraw today?\n"))
+    if withdrawal_amount > account_balance:
+        # FUNCTION THAT RETURNS THE CORRECT OUTPUT
+        print("$%.2f is greater than your account balance of $%.2f" % (withdrawal_amount, account_balance))
+    else:
+        # INPUT(PARAMETER)
+        balance = account_balance - 
+        # FUNCTION THAT RETURNS THE CORRECT OUTPUT
+        print("Withdrawal amount was $%.2f, current balance is $%.2f" % (withdrawal_amount, balance))
+
+
+userchoice = input(" What would you like to do? \n D for deposit, W for withdrawl, or B for balance.\n")
+
+if (userchoice == 'D' or 'd'):
+  deposit()
+
+elif (userchoice == 'B' or 'b'):
+  balance()
+
+elif (userchoice == 'W' or 'w'):
+  withdrawal()
+
+elif (userchoice =='Q' or 'q'):
+  print("Thank you for banking with us.")
